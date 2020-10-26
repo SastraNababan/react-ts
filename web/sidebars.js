@@ -15,12 +15,12 @@ module.exports = {
     {
       type: "category",
       label: "Materi",
-      items: ["intro", "component", "hook"],
+      items: ["intro", "component", "hook", "context", "stylecss", "patterns"],
     },
     {
       type: "category",
-      label: "Referensi",
-      items: ["doc1"],
+      label: "Lanjutan",
+      items: ["ref"],
     },
   ],
 };
