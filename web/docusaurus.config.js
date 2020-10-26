@@ -3,14 +3,14 @@ const remarkImages = require("remark-images");
 const remarkOembed = require("@agentofuser/remark-oembed");
 const oembed = require("@agentofuser/remark-oembed");
 module.exports = {
-  title: "Typescript for React",
-  tagline: "The tagline of my site",
+  title: "Panduan Typescript untuk Developer React",
+  tagline: "",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "SastraNababan", // Usually your GitHub org/user name.
+  projectName: "react-ts", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "React TS",
