@@ -1,0 +1,143 @@
+---
+id: component
+title: Component
+sidebar_label: Component
+---
+
+```TODO: Intro ```
+
+## Function Component
+
+### Component Sederhana
+Untuk function component yang tidak memiliki props, caranya sama saja seperti di javascript.
+Tidak wajib ada definisi type. 
+
+```tsx
+function Hello(){
+  return <h1> Hello  </h1>
+}
+```
+
+### Props
+Untuk defenisi props bisa menggunakan `type` atau `interface`
+```tsx
+type MyProps = {
+  name: string
+}
+
+function Hello(props:MyProps){
+  return <h1> Hello {props.name} </h1>
+}
+```
+
+### Default Props
+Untuk defenisi props bisa menggunakan `type` atau `interface`
+```tsx
+type MyProps = {
+  name: string,
+  active?: boolean,
+}
+
+function Hello({name, active = false}:MyProps){
+  return <h1> Hello {props.name} </h1>
+}
+```
+
+### Children
+```tsx
+type MyProps = {
+  name: string,
+  active?: boolean,
+  children: React.ReactNode
+}
+
+function Hello({name, active = false, children}:MyProps){
+  return (
+    <div>
+      <h1> Hello {props.name} </h1>
+      {children}
+    <div>
+  )
+}
+```
+
+
+## Class Component
+
+### Props & State
+```tsx
+interface Props {
+  name: string;
+  active?: boolean;
+  note?: string;
+}
+
+interface State {
+  online: boolean;
+}
+
+export default class User extends Component<Props, State> {
+  render() {
+    return (
+      <>
+        <p> Hello, {this.props.name} </p>
+        <p> Note: {this.props.note} </p>
+      </>
+    );
+  }
+}
+
+```
+
+
+
+### Default Props & State
+```tsx
+interface Props {
+  name: string;
+  active?: boolean;
+  note?: string;
+}
+
+interface State {
+  online: boolean;
+}
+
+static defaultProps = {
+  active: false,
+  note: "default note",
+};
+
+public readonly state: Readonly<State> = {
+  online: false,
+};
+
+export default class User extends Component<Props, State> {
+  render() {
+    return (
+      <>
+        <p> Hello, {this.props.name} </p>
+        <p> Note: {this.props.note} </p>
+        {this.state.online && <p>Online</p>}
+      </>
+    );
+  }
+}
+
+```
+
+## Type vs Interface
+
+## React.FC vs Normal Function
+Terkadang Function Component di defenisikan dengan *generic* type `FunctionComponent` atau 
+versi singkatnya `FC` 
+
+```tsx
+import React, { FC, FunctionComponent } from "react";
+
+function Hello:FC(){
+  return <h1> Hello React Typescript </h1>
+}
+```
+
+
