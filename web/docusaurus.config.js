@@ -5,7 +5,7 @@ const oembed = require("@agentofuser/remark-oembed");
 module.exports = {
   title: "Panduan Typescript untuk Developer React",
   tagline: "",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://react-ts-wine.vercel.app/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
@@ -27,7 +27,7 @@ module.exports = {
         },
         // { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/SastraNababan/react-ts",
           label: "GitHub",
           position: "right",
         },
